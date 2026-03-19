@@ -1,0 +1,53 @@
+button {
+    display: inline-block;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    font-weight: 200;
+    font-family: inherit;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F5F5F5;
+    transition: color 0.2s;
+    box-shadow: inset 0 0 0 4px #F5F5F5, 0 0 1px 1px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+    cursor: pointer !important;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+    height: 32px;
+    border-radius: 6px;
+    background-color: #0e0606;
+}
+button:before, button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 4px solid transparent;
+    will-change: transform;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+    transform: translateZ(0);
+}
+button:before {
+    border-color: #29c5e6 transparent;
+    transform: skew(90deg, 0);
+}
+button:after {
+    border-color: transparent #29c5e6;
+    transform: skew(0, 40deg);
+    transition: transform 0.4s;
+}
+button:hover {
+    color: #29c5e6;
+}
+button:hover:before, button:hover:after {
+    transform: skew(0, 0);
+}
